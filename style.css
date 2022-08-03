@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+}
+.clock {
+    width: 500px;
+    height: 500px;
+    background-image: url(img/background_for_clock.jpg);
+    background-size: cover;
+    border: ridge 10px grey;
+    border-radius: 50%;
+    margin-left: calc(50% - 500px / 2);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.hours {
+    background-image: url(img/hour_hand.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+    width: 75px;
+    height: 150px;
+    position: absolute;
+    left: calc(50% - 75px / 2);
+    bottom: 47.51%;
+    transform-origin: center 86.53%;
+    animation-name: hour-arow-move;
+    animation-duration: 43200s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* animation-iteration-count: infinite; */
+}
+.minutes {
+    background-image: url(img/minute_hand.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+    width: 75px;
+    height: 200px;
+    position: absolute;
+    left: calc(50% - 75px / 2);
+    bottom: 50%;
+    transform-origin: center 96.21%;
+    animation-name: minute-arow-move;
+    animation-duration: 3600s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.seconds {
+    background-color: red;
+    height: 250px;
+    width: 4px;
+    position: absolute;
+    left: calc(50% - 4px/ 2);
+    bottom: 45%;
+    transform-origin: center 87%;
+    animation-name: second-arow-move;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+p {
+    position: absolute;
+    font-size: 30px;
+    color: crimson;
+    margin: 0;
+}
+.num12 {
+    left: calc(50% - 30px / 2);
+}
+.num1 {
+    right: 25%;
+    top: 30px;
+}
+.num2{
+    right: 8%;
+    top: 110px;
+}
+.num3 {
+    right: 0;
+    top: calc(50% - 30px / 2);
+}
+.num4 {
+    right: 8%;
+    bottom: 110px;
+}
+.num5 {
+    right: 25%;
+    bottom: 30px;
+}
+.num6 {
+    left: calc(50% - 30px / 2);
+    bottom: 0;
+}
+.num7 {
+    left: 25%;
+    bottom: 30px;
+}
+.num8 {
+    left: 8%;
+    bottom: 110px;
+}
+.num9 {
+    top: calc(50% - 30px / 2);
+}
+.num10 {
+    left: 8%;
+    top: 110px;
+}
+.num11 {
+    left: 25%;
+    top: 30px;
+}
+
+
+
+/* animation */
+
+@keyframes hour-arow-move {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes minute-arow-move {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes second-arow-move {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
